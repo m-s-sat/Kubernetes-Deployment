@@ -8,7 +8,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vpromq
+      app: vprormq
   template:
     metadata:
       labels:
@@ -18,7 +18,7 @@ spec:
       - name: vpromq
         image: rabbitmq
         ports:
-        - name: vpromq-port
+        - name: vprormq-port
           containerPort: 3306
         env:
           - name: RABBITMQ_DEFAULT_PASS
