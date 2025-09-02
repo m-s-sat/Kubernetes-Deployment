@@ -1,0 +1,22 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: vproapp
+  labels:
+    app: vproapp
+  spec:
+  selector:
+    matchLabels:
+      app: vproapp
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          app: vproapp
+      spec:
+        containers:
+        - name: vproapp
+          image: vprocontainers/vprofilapp
+          ports:
+          - name: vproapp-port
+            containerPort: 8080
